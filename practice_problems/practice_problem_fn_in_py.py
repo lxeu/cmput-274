@@ -1,4 +1,4 @@
-i = int(input(""))
+i = int(input())
 
 def firstThreshold(i):
     '''
@@ -14,6 +14,7 @@ def firstThreshold(i):
     '''
     if i > 57375:
         return 57375 * 0.145
+    return i * 0.145
 
 def secondThreshold(i):
     '''
@@ -21,9 +22,6 @@ def secondThreshold(i):
 
     i - a floating point number
     return - a floating point number
-
-    Examples:
-    secondThreshold() -> 
     '''
     if i - 57375 < 0:
         return 0
@@ -37,9 +35,6 @@ def thirdThreshold(i):
 
     i - a floating point number
     return - a floating point number
-
-    Examples:
-    thirdThreshold() -> 
     '''
     if i - 114750 < 0:
         return 0
@@ -53,9 +48,6 @@ def fourthThreshold(i):
 
     i - a floating point number
     return - a floating point number
-
-    Examples:
-    fourthThreshold() -> 
     '''
     if i - 177882 < 0:
         return 0
@@ -64,9 +56,15 @@ def fourthThreshold(i):
     return (i - 177882) * 0.29
 
 def fifthThreshold(i):
+    '''
+    fithThreshold returns the amount of tax owed in the fith canadian tax bracket (beyond 253414)
+
+    i - a floating point number
+    return - a floating point number
+    '''
     if i - 253414 < 0:
         return 0
-    return i - 253414 * 0.33
+    return (i - 253414) * 0.33
 
 def incomeTax(i):
     '''
@@ -74,15 +72,7 @@ def incomeTax(i):
 
     i - a floating point number
     return - a floating point number
-
-    Examples:
-    incomeTax() -> 
     '''
-    if i <= 57375:
-        return i * 0.145
-    tax = firstThreshold(i)
+    return firstThreshold(i) + secondThreshold(i) + thirdThreshold(i) + fourthThreshold(i) + fifthThreshold(i)
 
-
-    print(tax)
-
-incomeTax(i)
+print(incomeTax(i))
