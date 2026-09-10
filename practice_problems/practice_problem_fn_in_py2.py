@@ -12,18 +12,23 @@ def milkPurchase(almond, oat, soy):
     milkPurchase(40,25,19) -> "Soy"
     milkPurchase(47,30,29) -> "Oat"
     '''
-    if almond < 20:
+    GLOBALLIMIT = 20
+    ALMONDLIMIT = 45
+    OATLIMIT = 40
+    SOYLIMIT = 37
+    
+    if almond < GLOBALLIMIT:
         return "Almond"
-    elif oat < 20:
+    if oat < GLOBALLIMIT:
         return "Oat"
-    elif soy < 20:
+    if soy < GLOBALLIMIT:
         return "Soy"
 
-    if almond < 45:
+    if almond < ALMONDLIMIT:
         return "Almond"
-    elif oat < 40:
+    if oat < OATLIMIT:
         return "Oat"
-    elif soy < 37:
+    if soy < SOYLIMIT:
         return "Soy"
     else:
         return "Nothing"
