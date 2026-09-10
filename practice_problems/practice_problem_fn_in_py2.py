@@ -2,9 +2,10 @@ def milkPurchase(almond, oat, soy):
     '''
     milkPurchase determines the type of milk to buy based on how much cents per 100 mL of each milk
 
-    almond - A number that states how cents per 100mL for Almond milk
-    oat - A number that states how cents per 100mL for Oat milk
-    soy - A number that states how cents per 100mL for Soy milk
+    almond - An integer that states how many cents per 100mL for almond milk
+    oat - An integer that states how many cents per 100mL for oat milk
+    soy - An integer that states how many cents per 100mL for soy milk
+    returns - A string of either "Almond", "Oat", "Soy", or "Nothing"
 
     Examples:
     milkPurchase(40,40,21) -> "Almond"
