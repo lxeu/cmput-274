@@ -1,5 +1,3 @@
-from logFloor import logFloor
-
 def digitSum(n):
     '''
     digitSum returns the sum of the digits of n
@@ -11,11 +9,12 @@ def digitSum(n):
         digitSum(735) -> 15
         digitSum(10000) -> 1
     '''
+    assert n > 0
+
     if n < 10:
         return n
-    currentDigit = n // (10**logFloor(n))
-    nextNumber = n - currentDigit * 10**logFloor(n)
-    ror = digitSum(nextNumber)
+    currentDigit = n % 10
+    ror = digitSum(n // 10)
     return currentDigit + ror
 
 print(digitSum(735))
