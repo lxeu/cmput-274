@@ -33,3 +33,5 @@ def ascendList(n):
         return cons(0, empty())
     ror = ascendList(n - 1)
     return append(n, ror)
+
+print(ascendList(2))
