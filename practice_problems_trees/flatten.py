@@ -17,4 +17,4 @@ def flatten1(bt):
     rTree = bt[2]
     lRor = flatten1(lTree)
     rRor = flatten1(rTree)
-    concat(val, concat(lRor, rRor))
+    return concat(val, concat(lRor, rRor))
