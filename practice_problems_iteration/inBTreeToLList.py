@@ -18,3 +18,5 @@ def inBTToLList(t):
             if t[2] != ():
                 cStack = push(t[2], cStack)
             cStack = push((t[0], (), ()), cStack)
+            if t[1] != ():
+                
